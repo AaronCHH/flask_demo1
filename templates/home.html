@@ -1,3 +1,20 @@
-<a href="{{ url_for('.home')}}">Home</a>|<a href="{{ url_for('.about')}}">About</a>
+{% extends 'base.html' %}
+  
+{% block title %}
+Welcome to AaronHsu.org
+{% endblock title %}
+
+
+{% block content  %}
+
 <br>
-home
+<div class="card" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='images/dj2.png') }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{{ url_for('about') }}" class="btn btn-dark">About Me</a>
+  </div>
+</div>
+
+{% endblock content  %}
